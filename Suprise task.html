@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Suprise task</title>
+	<link rel="stylesheet" href="">
+	<script >
+		
+		 function student(name,age,semester){
+		 	this.name=name
+		 	this.age=age
+		 	this.semester=semester
+		 }
+		 std1=new student("Haider",28,"2nd")
+
+		 std2=new student("ali",28,"1st")
+
+		 std3=new student("irfan",22,"3")
+         student.prototype.program='bcs'
+          //defineProperty(student.program.protype)
+       //   object.defineProperties
+
+
+       array=[std1,std2,std3];
+        function show(){
+        	input=prompt("enter property name")
+        	for(i=0;i<3;i++)
+        	{
+        		if(array[i][input]!=undefined)
+        			console.log(array[i][input])
+        	}
+
+        }
+        show()
+
+         Object.defineProperty(student.prototype, 'show', {
+  value: function show(){
+      console.log(this.name+","+ this.age+","+this.semester+","+this.program)
+},
+ writable: true
+});
+std1.show()
+std2.show()
+std3.show()
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
