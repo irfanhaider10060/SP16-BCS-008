@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // class student properties: name,fatherMame,Age
+        class student
+        {
+            constructor(name,fathername,age)
+            {
+                this.name=name;
+                this.fathername=fathername;
+                this.age=age;
+            }
+            set student_name(n)
+            {
+            this.name=n;
+            }
+            get student_name()
+            {
+                return this.name;
+            }
+        }
+        std1=new student("irfan","kazim",23);
+      //  std1.student_name="irfan";
+        console.log(std1);
+        //create two  classes named csStudent and managment that inherited  from student class
+        class cs extends student
+        {
+            constructor(name,fathername,age,managment)
+            {
+                //cs has an attribute named csStudent  managment has an attribute name fyptitle
+                super(name,fathername,age);
+                   this.managment=managment; 
+            }
+          
+        }
+        class managment extends student
+        {
+            constructor(name,fathername,age,fyptitle)
+            {
+              
+                super(name,fathername,age);
+                    this.fyptitle=fyptitle;
+                
+            }
+        }
+        
+        std2=new managment("ali","asim",22,"feedme");
+        std3=new cs("ali","aqib" ,24,"foodcare");
+       
+        console.log(std2);
+        console.log(std3);
+        
+        </script>
+</body>
+</html>
