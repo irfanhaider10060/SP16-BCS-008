@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<script>
+		// a) ES6 Function
+
+		let sum=a=>{
+    sum=a+a
+    return sum
+ }
+
+ console.log(sum(2))
+     //b)  ES 6 Use as Call Back 
+
+     var a = ["we are all good player","M Irfan Haider","usman ali" ];
+     var store_length= a.map( s => s.length );
+  console.log(store_length)
+
+  //   c)ES6  Cannot Creaate Argument but in normal Function we create argument
+  let arugment={
+    show_arugment:()=>{
+        for(j of arguments) // can't create arguments by itself
+            console.log(j)
+    }
+}
+
+// d)  Scope of This in ES6 and Normal Function
+
+
+let car ={ name:"Vitz",
+    car_name:function(){
+        return this.name      // Scope of this in normal function has defination and applicable 
+    }
+}
+console.log(car.car_name())
+
+let bus={name:"HINO",
+    bus_name:()=>{
+        return this.name // In Arrow function their is no defination of this so this has zero scope in ES6 functions
+    }
+}
+console.log(bus.bus_name())
+</script>
+</head>
+<body>
+	
+</body>
+</html>
